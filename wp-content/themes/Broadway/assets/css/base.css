@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #BF4D28; }
+
+.article_header {
+  background: #F6F7BD; }
+  .article_header h2 {
+    color: #655643;
+    font-size: 3em; }

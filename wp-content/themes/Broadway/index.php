@@ -1,14 +1,18 @@
 <?php get_header(); ?>
 
-<div id="container" class="wrapper">
+	<div class="home_content full-page"></div>
 
-	<div id="main_content">
+	<?php 
+		$query_posts = new WP_Query( array('post_type'=>'post', 'category_name'=>'portfolio' ));
+		while( $query_posts->have_posts() ) : $query_posts->the_post();
+	?>
+		<div class="porfolio_collection flexslider">
+			<div class="item">
+				<?php get_template_part( 'content' ); ?>
+			</div>
+		</div>
+	<?php endwhile; ?>
 
-	</div>
-	<div id="left_sidebar">
-		<?php get_sidebar(); ?>
-	</div>
 
-</div>
 
 <?php get_footer(); ?>
